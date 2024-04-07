@@ -1,0 +1,17 @@
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
+
+py_library(
+    name = "utils",
+    srcs = ["lib.py"],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//utils/grpc",
+        "@pip//google_cloud_storage",
+    ],
+)
+
+py_test(
+    name = "lib_test",
+    srcs = ["lib_test.py"],
+    deps = [":utils"],
+)
