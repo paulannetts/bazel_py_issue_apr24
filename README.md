@@ -7,4 +7,4 @@ Use python with requirements.in/lock dependencies installed in environment - in 
 
 However bazel gets confused...
 
-`bazel test //utils/lib_test` fails, mixing up utils/grpc folder for a nested dependency of the `google-cloud-...` package.
+`bazel test --test_output=all //utils:lib_test` fails, mixing up utils/grpc folder for a nested dependency of the `google-cloud-...` package.
