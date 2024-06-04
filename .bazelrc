@@ -1,0 +1,4 @@
+# Workspace bazelrc
+common --enable_bzlmod
+
+build --@rules_python//python/config_settings:bootstrap_impl=script
